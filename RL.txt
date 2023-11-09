@@ -1,0 +1,7 @@
+Series RL Circuit
+V 1 0 DC 1
+R 1 2 2K
+L 2 0 50m
+.TRAN 2.5u 250u UIC
+.PROBE
+.END
