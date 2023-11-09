@@ -1,0 +1,7 @@
+Series RC Circuit
+V 1 0 DC 5
+R 1 2 2K
+C 2 0 0.1u
+.TRAN 0.02m 2m UIC
+.PROBE
+.END
