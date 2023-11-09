@@ -1,0 +1,13 @@
+Active Highpass Filter:
+Design a first order high pass filter with cutoff frequency 5KHz
+and voltage gain of 5. Plot the frequency response using
+Pspice.
+CODE:
+Active HPF
+V 1 0 ac 1
+C 1 2 0.1u
+R 2 0 318.3
+E 3 0 2 0 5
+.ac dec 1000 100Hz 1000KHz
+.PROBE VM(3,0) VM(1,0)
+.END

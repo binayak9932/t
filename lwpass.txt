@@ -1,0 +1,13 @@
+Active Lowpass Filter:
+Design a 1
+st order low-pass filter with cutoff frequency 50kHz
+and voltage gain 2. Plot the frequency response using P-Spice.
+CODE:
+Active LPF
+V 1 0 AC 1
+R 1 2 31.83
+C 2 0 0.1u
+E 3 0 2 0 2
+.ac dec 1000 100Hz 1000kHz
+.PROBE VM(3,0) VM(1,0)
+.END

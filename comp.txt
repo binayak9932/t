@@ -1,0 +1,55 @@
+Verify compensation theorem using PSpice for the given circuit when the value
+of RL is increased by 30%.
+Case 1: When R3 is 20ohm.
+
+CODE
+With given R value
+V1 1 0 DC 75
+V2 3 0 DC 0
+R1 1 2 5
+R2 2 0 20
+R3 2 3 20
+.OP
+.END
+
+OUTPUT
+VOLTAGE SOURCE CURRENT
+NAME CURRENT
+V1 -5.000E+00
+V2 2.500E+00
+
+
+Case- 2: When R3 is 26 ohm.
+CODE
+R value increased
+V1 1 0 DC 75
+V2 3 0 DC 0
+R1 1 2 5
+R2 2 0 20
+R3 2 3 26
+.OP
+.END
+
+OUTPUT
+VOLTAGE SOURCE CURRENTS
+NAME CURRENT
+V1 -4.600E+00
+V2 2.000E+00
+
+
+Case-3: When voltage source is added
+CODE
+Compensated circuit
+V1 1 0 DC 75
+V2 3 0 DC –15
+R1 1 2 5
+R2 2 0 20
+R3 2 3 26
+.OP
+.END
+
+OUTPUT
+VOLTAGE SOURCE CURRENTS
+NAME CURRENT
+V1 -5.000E+00
+V2 2.500E+00
